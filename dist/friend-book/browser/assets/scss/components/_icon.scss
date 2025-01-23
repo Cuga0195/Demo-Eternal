@@ -1,0 +1,41 @@
+/**=====================
+    Form css start
+==========================**/
+.icon-theme {
+  stroke: rgba(rgb(12, 97, 16), 1);
+}
+.icon-dark {
+  stroke: rgba(rgb(12, 97, 16), 1);
+}
+.icon-font-color {
+  stroke: rgba(rgb(12, 97, 16), 1);
+}
+.icon-font-light {
+  stroke: rgba(rgb(12, 97, 16), 1);
+  &:hover {
+    stroke: rgba(rgb(255, 255, 255), 1);
+    transition: all 0.5s ease;
+  }
+}
+.icon-font-light2 {
+  stroke: rgba(rgb(255, 255, 255), 1);
+  &:hover {
+    stroke: rgba(rgb(255, 255, 255), 1);
+    transition: all 0.5s ease;
+  }
+}
+
+.active {
+  .icon-font-light {
+    stroke: rgba(rgb(255, 255, 255), 1);
+  }
+}
+.icon-light {
+  stroke: rgba(var(--white), 1);
+}
+.stroke-width-3 {
+  stroke-width: 3px;
+}
+.fill-white {
+  fill: rgba(var(--white), 1);
+}
