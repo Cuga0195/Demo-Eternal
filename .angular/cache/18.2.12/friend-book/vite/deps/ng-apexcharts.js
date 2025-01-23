@@ -1,29 +1,27 @@
 import {
   isPlatformBrowser
-} from "./chunk-UH3ZKFYL.js";
+} from "./chunk-ML7NWAL3.js";
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
-  Input,
   NgModule,
   NgZone,
-  Output,
   PLATFORM_ID,
-  ViewChild,
   inject,
+  input,
+  output,
   setClassMetadata,
   signal,
+  viewChild,
   ɵɵNgOnChangesFeature,
   ɵɵStandaloneFeature,
   ɵɵdefineComponent,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵelement,
-  ɵɵloadQuery,
-  ɵɵqueryRefresh,
-  ɵɵviewQuery
-} from "./chunk-NUH5KXS3.js";
+  ɵɵqueryAdvance,
+  ɵɵviewQuerySignal
+} from "./chunk-LTV4O3PE.js";
 import {
   asapScheduler
 } from "./chunk-UVFDOJUO.js";
@@ -36,9 +34,32 @@ import {
 var _c0 = ["chart"];
 var ChartComponent = class _ChartComponent {
   constructor() {
-    this.autoUpdateSeries = true;
-    this.chartReady = new EventEmitter();
+    this.chart = input();
+    this.annotations = input();
+    this.colors = input();
+    this.dataLabels = input();
+    this.series = input();
+    this.stroke = input();
+    this.labels = input();
+    this.legend = input();
+    this.markers = input();
+    this.noData = input();
+    this.fill = input();
+    this.tooltip = input();
+    this.plotOptions = input();
+    this.responsive = input();
+    this.xaxis = input();
+    this.yaxis = input();
+    this.forecastDataPoints = input();
+    this.grid = input();
+    this.states = input();
+    this.title = input();
+    this.subtitle = input();
+    this.theme = input();
+    this.autoUpdateSeries = input(true);
+    this.chartReady = output();
     this.chartInstance = signal(null);
+    this.chartElement = viewChild.required("chart");
     this.ngZone = inject(NgZone);
     this.isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
   }
@@ -52,9 +73,9 @@ var ChartComponent = class _ChartComponent {
     this.destroy();
   }
   hydrate(changes) {
-    const shouldUpdateSeries = this.autoUpdateSeries && Object.keys(changes).filter((c) => c !== "series").length === 0;
+    const shouldUpdateSeries = this.autoUpdateSeries() && Object.keys(changes).filter((c) => c !== "series").length === 0;
     if (shouldUpdateSeries) {
-      this.updateSeries(this.series, true);
+      this.updateSeries(this.series(), true);
       return;
     }
     this.createElement();
@@ -63,77 +84,18 @@ var ChartComponent = class _ChartComponent {
     return __async(this, null, function* () {
       const {
         default: ApexCharts
-      } = yield import("./apexcharts.common-K24PHKWT.js");
+      } = yield import("./apexcharts.esm-VKTENM4S.js");
       window.ApexCharts ||= ApexCharts;
       const options = {};
-      if (this.annotations) {
-        options.annotations = this.annotations;
-      }
-      if (this.chart) {
-        options.chart = this.chart;
-      }
-      if (this.colors) {
-        options.colors = this.colors;
-      }
-      if (this.dataLabels) {
-        options.dataLabels = this.dataLabels;
-      }
-      if (this.series) {
-        options.series = this.series;
-      }
-      if (this.stroke) {
-        options.stroke = this.stroke;
-      }
-      if (this.labels) {
-        options.labels = this.labels;
-      }
-      if (this.legend) {
-        options.legend = this.legend;
-      }
-      if (this.fill) {
-        options.fill = this.fill;
-      }
-      if (this.tooltip) {
-        options.tooltip = this.tooltip;
-      }
-      if (this.plotOptions) {
-        options.plotOptions = this.plotOptions;
-      }
-      if (this.responsive) {
-        options.responsive = this.responsive;
-      }
-      if (this.markers) {
-        options.markers = this.markers;
-      }
-      if (this.noData) {
-        options.noData = this.noData;
-      }
-      if (this.xaxis) {
-        options.xaxis = this.xaxis;
-      }
-      if (this.yaxis) {
-        options.yaxis = this.yaxis;
-      }
-      if (this.forecastDataPoints) {
-        options.forecastDataPoints = this.forecastDataPoints;
-      }
-      if (this.grid) {
-        options.grid = this.grid;
-      }
-      if (this.states) {
-        options.states = this.states;
-      }
-      if (this.title) {
-        options.title = this.title;
-      }
-      if (this.subtitle) {
-        options.subtitle = this.subtitle;
-      }
-      if (this.theme) {
-        options.theme = this.theme;
-      }
+      const properties = ["annotations", "chart", "colors", "dataLabels", "series", "stroke", "labels", "legend", "fill", "tooltip", "plotOptions", "responsive", "markers", "noData", "xaxis", "yaxis", "forecastDataPoints", "grid", "states", "title", "subtitle", "theme"];
+      properties.forEach((property) => {
+        const value = this[property]();
+        if (value) {
+          options[property] = value;
+        }
+      });
       this.destroy();
-      const chartInstance = this.ngZone.runOutsideAngular(() => new ApexCharts(this.chartElement.nativeElement, options));
+      const chartInstance = this.ngZone.runOutsideAngular(() => new ApexCharts(this.chartElement().nativeElement, options));
       this.chartInstance.set(chartInstance);
       this.render();
       this.chartReady.emit({
@@ -216,37 +178,36 @@ var ChartComponent = class _ChartComponent {
       selectors: [["apx-chart"]],
       viewQuery: function ChartComponent_Query(rf, ctx) {
         if (rf & 1) {
-          ɵɵviewQuery(_c0, 7);
+          ɵɵviewQuerySignal(ctx.chartElement, _c0, 5);
         }
         if (rf & 2) {
-          let _t;
-          ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.chartElement = _t.first);
+          ɵɵqueryAdvance();
         }
       },
       inputs: {
-        chart: "chart",
-        annotations: "annotations",
-        colors: "colors",
-        dataLabels: "dataLabels",
-        series: "series",
-        stroke: "stroke",
-        labels: "labels",
-        legend: "legend",
-        markers: "markers",
-        noData: "noData",
-        fill: "fill",
-        tooltip: "tooltip",
-        plotOptions: "plotOptions",
-        responsive: "responsive",
-        xaxis: "xaxis",
-        yaxis: "yaxis",
-        forecastDataPoints: "forecastDataPoints",
-        grid: "grid",
-        states: "states",
-        title: "title",
-        subtitle: "subtitle",
-        theme: "theme",
-        autoUpdateSeries: "autoUpdateSeries"
+        chart: [1, "chart"],
+        annotations: [1, "annotations"],
+        colors: [1, "colors"],
+        dataLabels: [1, "dataLabels"],
+        series: [1, "series"],
+        stroke: [1, "stroke"],
+        labels: [1, "labels"],
+        legend: [1, "legend"],
+        markers: [1, "markers"],
+        noData: [1, "noData"],
+        fill: [1, "fill"],
+        tooltip: [1, "tooltip"],
+        plotOptions: [1, "plotOptions"],
+        responsive: [1, "responsive"],
+        xaxis: [1, "xaxis"],
+        yaxis: [1, "yaxis"],
+        forecastDataPoints: [1, "forecastDataPoints"],
+        grid: [1, "grid"],
+        states: [1, "states"],
+        title: [1, "title"],
+        subtitle: [1, "subtitle"],
+        theme: [1, "theme"],
+        autoUpdateSeries: [1, "autoUpdateSeries"]
       },
       outputs: {
         chartReady: "chartReady"
@@ -275,86 +236,7 @@ var ChartComponent = class _ChartComponent {
       changeDetection: ChangeDetectionStrategy.OnPush,
       standalone: true
     }]
-  }], null, {
-    chart: [{
-      type: Input
-    }],
-    annotations: [{
-      type: Input
-    }],
-    colors: [{
-      type: Input
-    }],
-    dataLabels: [{
-      type: Input
-    }],
-    series: [{
-      type: Input
-    }],
-    stroke: [{
-      type: Input
-    }],
-    labels: [{
-      type: Input
-    }],
-    legend: [{
-      type: Input
-    }],
-    markers: [{
-      type: Input
-    }],
-    noData: [{
-      type: Input
-    }],
-    fill: [{
-      type: Input
-    }],
-    tooltip: [{
-      type: Input
-    }],
-    plotOptions: [{
-      type: Input
-    }],
-    responsive: [{
-      type: Input
-    }],
-    xaxis: [{
-      type: Input
-    }],
-    yaxis: [{
-      type: Input
-    }],
-    forecastDataPoints: [{
-      type: Input
-    }],
-    grid: [{
-      type: Input
-    }],
-    states: [{
-      type: Input
-    }],
-    title: [{
-      type: Input
-    }],
-    subtitle: [{
-      type: Input
-    }],
-    theme: [{
-      type: Input
-    }],
-    autoUpdateSeries: [{
-      type: Input
-    }],
-    chartReady: [{
-      type: Output
-    }],
-    chartElement: [{
-      type: ViewChild,
-      args: ["chart", {
-        static: true
-      }]
-    }]
-  });
+  }], null, null);
 })();
 var declarations = [ChartComponent];
 var NgApexchartsModule = class _NgApexchartsModule {
