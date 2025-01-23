@@ -1,0 +1,138 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Completar Registro de Perfil</h5>
+    <!-- <button
+      type="button"
+      class="btn-close"
+      (click)="modalServices.dismissAll()"
+    ></button> -->
+  </div>
+  <div class="modal-body">
+    <div class="edit-profile-sec">
+      <div class="profile-wrap">
+        <div class="edit-title">
+          <div class="icon">
+            <app-feather-icon
+              [icons]="'image'"
+              [class]="'iw-16 ih-16'"
+            ></app-feather-icon>
+          </div>
+          <h5>subir foto</h5>
+        </div>
+        <div class="edit-content">
+          <div class="profile-pic">
+            <div
+              class="bg-size"
+              style="
+                background-image: url(https://th.bing.com/th/id/OIP.Sja44zpnn6_1KMbF9UWDNwHaHa?w=1920&h=1920&rs=1&pid=ImgDetMain);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+                width: 100px;
+                height: 100px;
+                margin-bottom: 30px;
+                margin-left: 200px;
+              "
+            >
+              <img
+                src="assets/images/user-sm/1.jpg"
+                class="img-fluid bg-img"
+                alt=""
+                style="display: none"
+              />
+            </div>
+            <a href="javascript:void(0)">Elegir una foto</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="edit-title">
+          <div class="icon">
+            <app-feather-icon
+              [icons]="'user'"
+              [class]="'iw-16 ih-16'"
+            ></app-feather-icon>
+          </div>
+          <h5>Infomación Personal</h5>
+        </div>
+
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">* Nombres:</h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">* Apellidos:</h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Tipo de Documento:</h5>
+            <select class="col-8 selectito" placeholder="Ingrese su código...">
+              <option value="">... Seleccionar</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">
+              Número de Documento:
+            </h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">
+              * Correo Electrónico:
+            </h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">NickName:</h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Teléfono:</h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">
+              Fecha de Nacimiento:
+            </h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px; margin-bottom: 10px">
+              Género:
+            </h5>
+            <select class="col-8 selectito">
+              <option>... Seleccionar</option>
+              <option value="M">Masculino</option>
+              <option value="F">Femenino</option>
+              <option value="U">Otro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a (click)="openVincular()" type="button" class="btn btn-solid"
+      >Guardar Cambios</a
+    >
+  </div>
+</div>

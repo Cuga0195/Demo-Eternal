@@ -1,0 +1,138 @@
+<div class="modal-content">
+  @if (tab1Visible){
+  <div class="tab-1">
+    <div class="modal-header">
+      <h5 class="modal-title">Vincular Usuario</h5>
+      <!-- <button
+      type="button"
+      class="btn-close"
+      (click)="modalServices.dismissAll()"
+    ></button> -->
+    </div>
+    <div class="modal-body">
+      <div
+        style="
+          border: 1px solid rgb(211, 211, 211);
+          margin: 10px;
+          border-radius: 5px;
+        "
+      >
+        <div style="text-align: center; margin: 10px">
+          <h5 style="margin-bottom: 5px">
+            Ingresa su tipo y número de Documento de identidad para validar que
+            es cliente de una empresa de sepelio.
+          </h5>
+          <h5 style="margin-bottom: 15px">
+            Automáticamente asociaremos la información del fallecido.
+          </h5>
+        </div>
+        <div class="row" style="margin-bottom: 20px">
+          <div class="col-8">
+            <div class="row edit-title">
+              <h5
+                class="col-5"
+                style="margin-left: 130px; margin-right: -48px; margin-top: 6px"
+              >
+                Tipo de Documento:
+              </h5>
+              <select
+                class="col-5 selectito"
+                placeholder="Ingrese su código..."
+              >
+                <option value="">... Seleccionar</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px">
+          <div class="col-8">
+            <div class="row edit-title">
+              <h5
+                class="col-5"
+                style="margin-left: 107px; margin-right: -25px; margin-top: 6px"
+              >
+                Número de Documento:
+              </h5>
+              <input
+                class="col-5 inputito"
+                placeholder="Ingrese su Número de Documento..."
+              />
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px">
+          <div class="col-8">
+            <div class="row edit-title">
+              <h5
+                class="col-5"
+                style="margin-left: 124px; margin-right: -41px; margin-top: 6px"
+              >
+                Seleccionar Empresa Funeraria:
+              </h5>
+              <select
+                class="col-5 selectito"
+                placeholder="Ingrese su código..."
+              >
+                <option value="">... Seleccionar</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-4"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px">
+          <div style="text-align: center">
+            <a class="btn btn-solid" (click)="showTab(2)">Vincular</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center">
+        <a
+          [routerLink]="['../../profile/about']"
+          (click)="modalServices.dismissAll()"
+          href=""
+          class="btn btn-white"
+          >hacerlo luego</a
+        >
+      </div>
+    </div>
+  </div>
+  } @if (tab2Visible){
+  <div class="tab-2">
+    <div class="modal-body" style="padding: 50px 50px 0px 50px">
+      <div
+        style="
+          border: 1px solid rgb(211, 211, 211);
+          margin: 10px;
+          border-radius: 5px;
+          padding: 20px;
+        "
+      >
+        <div style="text-align: center; margin: 10px">
+          <h5 style="margin-bottom: 5px; font-size: large; color: green">
+            ¡ Felicidades !
+          </h5>
+          <img
+            src="../../../../../../assets/logos_eterna_horizontal/valid.png"
+            alt=""
+            width="150px"
+            height="150px"
+          />
+          <h5 style="margin-top: 5px; font-size: large; color: green">
+            Tú cuenta ha sido vinculada con Éxito.
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: end; margin: 20px">
+      <a
+        [routerLink]="['../../profile/about']"
+        (click)="modalServices.dismissAll()"
+        class="btn btn-solid"
+        >Continuar</a
+      >
+    </div>
+  </div>
+  }
+</div>

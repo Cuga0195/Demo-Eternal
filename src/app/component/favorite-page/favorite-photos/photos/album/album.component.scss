@@ -1,0 +1,113 @@
+.add-card2 {
+  border: 1px solid rgb(190, 190, 190) !important;
+  position: relative;
+}
+.add-icon:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.profile-header {
+  width: 100%;
+  background-color: #07341f;
+  height: 125px;
+}
+.profile-header2 {
+  width: 100%;
+  background-color: #a1d5cb;
+  height: 125px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 100%;
+  border: 1px solid rgb(204, 203, 203) !important;
+  position: relative;
+  z-index: 1;
+  top: 55px;
+}
+.profile-img > div {
+  height: 100%;
+  border-radius: 100%;
+}
+.stats {
+  position: absolute;
+  top: -45px;
+  right: 45px;
+  border-radius: 100%;
+  width: 29px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter-stats {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      padding-left: 18px;
+      padding-right: 18px;
+      position: relative;
+      h3 {
+        color: rgba(var(--title-color), 1);
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      h5 {
+        color: rgba(var(--font-color), 1);
+        text-transform: capitalize;
+      }
+      + li {
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 18px;
+          background-color: rgba(var(--theme-color), 0.2);
+        }
+      }
+    }
+  }
+}
+
+.counter-stats2 {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      padding-left: 18px;
+      padding-right: 18px;
+      position: relative;
+      h3 {
+        color: rgba(var(--title-color), 1);
+        font-weight: 700;
+        margin-bottom: 3px;
+      }
+      h5 {
+        color: rgba(var(--font-color), 1);
+        text-transform: capitalize;
+      }
+      + li {
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 18px;
+          background-color: rgba(var(--theme-color), 0.2);
+        }
+      }
+    }
+  }
+}

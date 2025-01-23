@@ -1,0 +1,16 @@
+<app-profile-pages></app-profile-pages>
+<div class="container-fluid contenido-timeline">
+  <div class="pagina-contenido">
+    <div class="contenido-left">
+      <app-about-intro-my-self
+        [introMySelf]="introMySelf"
+      ></app-about-intro-my-self>
+    </div>
+    <div class="contenido-right">
+      <app-menu></app-menu>
+      <div class="suggestion-box section-t-space">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

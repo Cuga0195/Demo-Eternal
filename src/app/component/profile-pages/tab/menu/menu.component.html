@@ -1,0 +1,22 @@
+<div class="perfil-menu section-t-space">
+  <ul>
+    <li>
+      <a [routerLink]="['./friendSuggestion']" [routerLinkActive]="'active'">
+        <app-feather-icon
+          [class]="'icon-font-light iw-16 ih-16'"
+          [icons]="'image'"
+        ></app-feather-icon>
+        <h6 style="margin-left: 10px">Recuerdos</h6>
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['./activityfeed']" [routerLinkActive]="'active'">
+        <app-feather-icon
+          [icons]="'mail'"
+          [class]="'icon-font-light iw-16 ih-16'"
+        ></app-feather-icon>
+        <h6 style="margin-left: 10px">Condolencias</h6>
+      </a>
+    </li>
+  </ul>
+</div>

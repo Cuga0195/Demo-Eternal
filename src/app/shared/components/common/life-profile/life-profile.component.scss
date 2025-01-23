@@ -1,0 +1,326 @@
+.pagina-body {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+.pagina-center {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.cabecera {
+  background-color: #a1d5cb;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 10px 5px 2px;
+}
+
+.contenido-timeline {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pagina-contenido {
+  display: flex;
+  margin-left: 2px;
+  margin-right: -10px;
+  position: relative;
+  flex-wrap: wrap;
+  .contenido-left {
+    margin-top: 20px;
+    padding-right: 10px;
+    width: 380px;
+    margin-bottom: 10px;
+  }
+  .contenido-right {
+    width: 1040px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+  }
+
+  .contenido-right2 {
+    width: 1420px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .actividad-list {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.02);
+    padding: 10px;
+    width: 100%;
+  }
+  .perfil-menu {
+    background-color: rgba(white, 1);
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    height: 65px;
+  }
+
+  .perfil-menu ul {
+    margin-left: 0px;
+  }
+
+  .perfil-menu ul li {
+    background-color: #29504a;
+    display: inline-block;
+    margin: 35px 0px 30px 10px;
+    border-radius: 5px 5px 0px 0px;
+
+    a {
+      display: flex;
+      align-items: center;
+      border: 1px solid #29504a;
+      padding: 13px 22px;
+      border-radius: 5px 5px 0px 0px;
+    }
+    h6 {
+      text-transform: capitalize;
+      color: white !important;
+      font-weight: 600;
+      font-size: calc(13px + (15 - 13) * ((100vw - 320px) / (1920 - 320)));
+      transition: all 0.5s ease;
+      font-family: "Montserrat", sans-serif;
+    }
+  }
+
+  .icon-active {
+    stroke: white !important;
+  }
+
+  @media (max-width: 600px) {
+    .actividad-list {
+      width: 100%;
+      padding: 11px !important;
+    }
+    .contenido-left {
+      width: 100%;
+      margin-top: 10px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .contenido-right {
+      width: 100%;
+      margin-top: -1px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .contenido-right2 {
+      width: 100%;
+      padding-left: 0px;
+    }
+  }
+}
+
+.story-content {
+  background-color: rgb(245, 255, 248);
+  left: 0;
+  bottom: 0px;
+  padding: 7px;
+  width: 100%;
+  height: 73px !important;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+
+.story-content h6 {
+  color: rgba(black, 1);
+  text-transform: capitalize;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  opacity: 0.9;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+.story-content span {
+  color: rgba(black, 1);
+  text-transform: capitalize;
+  opacity: 0.9;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  font-family: "Montserrat", sans-serif;
+}
+
+.adaptive-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.contenedor-audio {
+  background-color: rgba(white, 1);
+  margin: auto;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.contenido-audio {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+.contenido-logo-audio {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+.logo-audio {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-image: url("https://www.interjoomla.com.ar/wp-content/uploads/2020/05/9.png");
+  background-position: center center;
+  background-size: cover;
+  transition: all ease-in-out 0.5s;
+}
+.metrica-progreso-audio {
+  stroke: rgba(rgb(222, 255, 215), 1);
+}
+.color-progreso-audio {
+  stroke: rgba(rgb(74, 213, 61), 1);
+}
+.progreso-audio {
+  transform: rotate(-90deg);
+  transition: all linear 0.1s;
+}
+
+.song-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+.song-info-title {
+  display: inline-block;
+  color: rgba(var(--title-color), 1);
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
+  margin-right: -10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+.song-info-artist {
+  color: rgba(var(--font-color), 1);
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+.player-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 14px;
+}
+.player-wrapper > i {
+  cursor: pointer;
+}
+.player-move-btn {
+  color: rgba(var(--black), 0.2);
+  font-size: 2.5rem;
+}
+.player-state-btn {
+  width: 48px;
+  height: 48px;
+  fill: rgba(var(--theme-color), 1);
+  font-size: 3rem;
+  color: #3d9724;
+  margin: 0 30px;
+  stroke-width: 1px;
+  stroke: rgba(var(--white), 1);
+}
+.volume-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 30px 30px;
+  position: relative;
+  > i {
+    width: 20px;
+    cursor: pointer;
+    color: rgba(var(--black), 0.2);
+  }
+  .volume-bar {
+    width: 60%;
+    position: relative;
+    #volume-slider {
+      -webkit-appearance: none;
+      outline: none;
+      margin: 0;
+      width: 100%;
+      height: 5px;
+      border-radius: 10px;
+      background-color: rgba(gray, 0.1);
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: rgba(rgb(34, 87, 34), 1);
+        box-shadow: 0 0 3px #1f1f1f;
+        cursor: pointer;
+      }
+    }
+    .volume-trail {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      width: 50%;
+      height: 5px;
+      border-radius: 10px;
+      background-color: rgba(green, 1);
+      transition: width linear 0.1s;
+    }
+  }
+}
+
+.custom-nav-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff !important;
+  background-color: #007bff !important;
+  border-radius: 5px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+
+  &.prev {
+    margin-right: 10px;
+  }
+
+  &.next {
+    margin-left: 10px;
+  }
+}

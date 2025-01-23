@@ -1,0 +1,232 @@
+<div class="card-title">
+  <h3>Recuerdos de Edmundo</h3>
+  <br />
+</div>
+<div class="card-title">
+  <h5 style="margin-left: 0px !important; margin-top: 15px">
+    Momentos más importantes en la vida de nuestro querido, Edmundo
+  </h5>
+</div>
+<div class="suggestion-content ratio_115">
+  <div class="boton-orden">
+    <div
+      class="setting-dropdown btn-group custom-dropdown arrow-none dropdown-sm drop-tusa"
+      (clickOutside)="outSideClose()"
+    >
+      <a
+        class="btn-white"
+        href="javascript:void(0)"
+        [class.show]="isShow"
+        (click)="isShow = !isShow"
+        style="display: flex; padding: 5px"
+      >
+        <app-feather-icon
+          [class]="'icon-font-light iw-16 ih-16'"
+          [icons]="'more-vertical'"
+        ></app-feather-icon>
+        <app-feather-icon
+          [class]="'icon-font-light iw-16 ih-16'"
+          [icons]="'corner-right-down'"
+        ></app-feather-icon>
+      </a>
+      <div
+        class="dropdown-menu dropdown-menu-right custom-dropdown"
+        [class.show]="isShow"
+        style="
+          position: absolute;
+          inset: 0px auto auto 0px;
+          margin: 0px;
+          transform: translate(-116px, 41px);
+        "
+      >
+        <ul>
+          <li>
+            <a href="javascript:void(0)">
+              <app-feather-icon
+                [class]="'icon-font-light iw-16 ih-16'"
+                [icons]="'image'"
+              ></app-feather-icon>
+              más recientes</a
+            >
+          </li>
+          <li class="choose-file">
+            <a href="javascript:void(0)">
+              <app-feather-icon
+                [class]="'icon-font-light iw-16 ih-16'"
+                [icons]="'upload'"
+              ></app-feather-icon>
+              más antiguas</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="icono-izquierda">
+    <app-feather-icon
+      [class]="'icon-theme iw-20 ih-20'"
+      [icons]="'maximize'"
+    ></app-feather-icon>
+  </div>
+  <div class="icono-derecha">
+    <app-feather-icon
+      [class]="'icon-theme iw-30 ih-30'"
+      [icons]="'chevron-right'"
+    ></app-feather-icon>
+  </div>
+  <div class="slide-2 no-arrow default-space">
+    <owl-carousel-o [options]="friendSuggestionOptions">
+      @if(friendSuggestion){ @for (slideData of friendSuggestion; track
+      slideData) {
+      <ng-template carouselSlide>
+        @if(slideData.audio == null && slideData.video == null){
+        <div>
+          <div (click)="openModel()">
+            <div class="story-content2">
+              <div class="iconito">
+                <app-feather-icon
+                  [class]="'icon-theme iw-30 ih-30'"
+                  [icons]="'arrow-down-circle'"
+                ></app-feather-icon>
+              </div>
+              <h5 style="margin-top: 20px">{{ slideData.date }}</h5>
+              <h6>{{ slideData.name }}</h6>
+            </div>
+            <div class="story-box">
+              <div class="adaptive-overlay {{ slideData.class }}-overlay"></div>
+              <div
+                class="story-bg bg-size"
+                [ngStyle]="{
+                  'background-image': 'url(' + slideData.images + ')'
+                }"
+                style="
+                  background-size: cover;
+                  background-position: center center;
+                  background-repeat: no-repeat;
+
+                  display: block;
+                "
+              ></div>
+            </div>
+            <div class="story-content">
+              <span>{{ slideData.title }}</span>
+            </div>
+          </div>
+        </div>
+        } @if(slideData.audio != null && slideData.video == null){
+        <div class="story-content2">
+          <div class="iconito">
+            <app-feather-icon
+              [class]="'icon-theme iw-30 ih-30'"
+              [icons]="'arrow-down-circle'"
+            ></app-feather-icon>
+          </div>
+          <h5 style="margin-top: 20px">{{ slideData.date }}</h5>
+          <h6>{{ slideData.name }}</h6>
+        </div>
+        <div class="card-title">
+          <div class="contendor-audio">
+            <div class="contenido-audio">
+              <div class="contenido-logo-audio">
+                <svg
+                  class="progreso-audio"
+                  width="160"
+                  height="160"
+                  viewBox="0 0 200 200"
+                >
+                  <circle
+                    class="metrica-progreso-audio"
+                    cx="100"
+                    cy="100"
+                    r="90"
+                    stroke-width="10"
+                    fill="none"
+                  />
+                  <circle
+                    class="color-progreso-audio"
+                    cx="100"
+                    cy="100"
+                    r="90"
+                    stroke-width="10"
+                    fill="none"
+                    stroke-dasharray="0 600"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <div class="logo-audio"></div>
+              </div>
+              <div class="song-info">
+                <h2 class="song-info-title">{{ slideData.name }}</h2>
+                <h6 class="song-info-artist">{{ slideData.title }}</h6>
+              </div>
+            </div>
+            <div class="player-wrapper">
+              <i class="fas fa-caret-left player-move-btn"></i>
+              <i class="fas fa-play-circle player-state-btn"></i>
+              <i class="fas fa-caret-right player-move-btn"></i>
+            </div>
+            <div class="volume-wrapper">
+              <i class="fas fa-volume-off" style="text-align: right"></i>
+              <div class="volume-bar">
+                <input
+                  type="range"
+                  name="volume-slider"
+                  id="volume-slider"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value="0.5"
+                />
+                <div class="volume-trail"></div>
+              </div>
+              <i class="fas fa-volume-up"></i>
+            </div>
+          </div>
+        </div>
+        } @if(slideData.video != null){
+        <div>
+          <div (click)="openModel()">
+            <div class="story-content2">
+              <div class="iconito">
+                <app-feather-icon
+                  [class]="'icon-theme iw-30 ih-30'"
+                  [icons]="'arrow-down-circle'"
+                ></app-feather-icon>
+              </div>
+              <h5 style="margin-top: 20px">{{ slideData.date }}</h5>
+              <h6>{{ slideData.name }}</h6>
+            </div>
+            <div class="story-box">
+              <div
+                class="story-bg bg-size"
+                [ngStyle]="{
+                  'background-image': 'url(' + slideData.video + ')'
+                }"
+                style="
+                  background-size: cover;
+                  background-position: center center;
+
+                  display: block;
+                "
+              >
+                <img
+                  [src]="slideData.video"
+                  class="img-fluid bg-img"
+                  alt=""
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div class="story-content">
+              <span>{{ slideData.title }}</span>
+            </div>
+          </div>
+        </div>
+        }
+      </ng-template>
+      } }
+    </owl-carousel-o>
+  </div>
+  <br />
+  <br />
+</div>

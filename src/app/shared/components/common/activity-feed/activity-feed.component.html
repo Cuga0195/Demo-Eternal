@@ -1,0 +1,43 @@
+<div class="actividad section-t-space">
+  <div class="card-title">
+    <h3 style="margin: 20px">Condolencias</h3>
+    <div class="settings">
+      <a
+        (click)="createCondolence()"
+        href="javascript:void(0)"
+        class="btn btn-outline ms-auto botonsitoarriba"
+      >
+        <app-feather-icon
+          [class]="'icon-font-light2 iw-16 ih-16'"
+          [icons]="'edit-3'"
+          style="margin-right: 5px"
+        ></app-feather-icon>
+        Deja Tu Mensaje
+      </a>
+    </div>
+  </div>
+  <div class="contenido-condolencias">
+    <div class="listado">
+      <app-condolences></app-condolences>
+    </div>
+    <!-- <div class="container" style="justify-content: center; text-align: center">
+      <span>
+        Aun No Tiene ninguna Condolencia; no deseas ser el primero en poner un
+        lindo mensaje para Edmundo?</span
+      >
+    </div> -->
+  </div>
+  <a
+    (click)="createCondolence()"
+    href="javascript:void(0)"
+    id="botonsitoabajo"
+    class="btn btn-outline ms-auto ocultar"
+  >
+    <app-feather-icon
+      [class]="'icon-font-light2 iw-16 ih-16'"
+      [icons]="'edit-3'"
+      style="margin-right: 5px"
+    ></app-feather-icon>
+    Deja Tu Mensaje
+  </a>
+</div>

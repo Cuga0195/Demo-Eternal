@@ -1,0 +1,136 @@
+<!-- contenido modal -->
+<div class="modal-content">
+  <!-- titulo modal -->
+  <div class="modal-header">
+    <h5 style="font-weight: 600; font-size: 15px" class="modal-title">
+      Deja tus Condolencias
+    </h5>
+    <button
+      type="button"
+      class="btn-close"
+      (click)="modalServices.dismissAll()"
+    ></button>
+  </div>
+
+  <!-- cuerpo del modal -->
+  <div class="row">
+    <div class="colg-12 col-md-5 col-lg-5 modal-body">
+      <div class="row">
+        <div class="col-sm-10 col-md-12 col-lg-12">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Nombres:</h5>
+            <input class="col-8 inputito" [(ngModel)]="nombres" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-12">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Apellidos:</h5>
+            <input class="col-8 inputito" [(ngModel)]="apellidos" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-12">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Teléfono:</h5>
+            <input class="col-8 inputito" [(ngModel)]="telefono" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-12">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Correo:</h5>
+            <input class="col-8 inputito" [(ngModel)]="correo" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-12">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px; margin-bottom: 10px">
+              Parentesco:
+            </h5>
+            <select class="col-8 selectito" [(ngModel)]="parentesco">
+              <option value="Amigo">Amigo</option>
+              <option value="Familiar">Familiar</option>
+              <option value="Compañero de trabajo">Compañero de trabajo</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-12 profile-wrap">
+          <div class="row edit-title">
+            <h5 class="col-sm-12 col-md-12 col-lg-12">
+              Escríbele unas Bonitas Palabras para Edmundo :
+            </h5>
+            <textarea class="col-12 textarea" [(ngModel)]="mensaje"></textarea>
+          </div>
+        </div>
+        <div class="profile-wrap">
+          <div class="edit-title locura">
+            <div class="icon" style="margin-right: 10px">
+              <app-feather-icon
+                [icons]="'image'"
+                [class]="'iw-16 ih-16'"
+              ></app-feather-icon>
+            </div>
+            <h5>Agregar una Imagen</h5>
+          </div>
+          <div class="edit-content">
+            <div class="profile-pic" style="margin-left: 20px">
+              <div>
+                <img
+                  src="https://th.bing.com/th/id/OIP.Sja44zpnn6_1KMbF9UWDNwHaHa?w=1920&h=1920&rs=1&pid=ImgDetMain"
+                  class="img-fluid bg-img"
+                  alt=""
+                  style="display: block; border-radius: 15px"
+                />
+              </div>
+              <a
+                href="javascript:void(0)"
+                (click)="editImage()"
+                style="color: green; margin-left: 20px"
+                >Agregar Imagen (opcional)</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- columna de tarjeta -->
+    <div class="colg-12 col-md-7 col-lg-7">
+      <div style="text-align: center; padding: 30px">
+        <h5>Vista Previa:</h5>
+      </div>
+      <div class="content-derecha">
+        <div class="medio-cuerpo">
+          <img
+            src="../../../../../../assets/logos_eterna_horizontal/Group.png"
+            alt=""
+            class="loguito"
+          />
+          <h4>
+            <span class="titulo"
+              >{{ nombres + " " + apellidos }} &nbsp;
+              {{ "(" + parentesco + ")" }}
+            </span>
+            <br />
+            <br />
+            "
+            {{ mensaje }}
+            "
+          </h4>
+
+          <img
+            src="https://th.bing.com/th/id/OIP.Sja44zpnn6_1KMbF9UWDNwHaHa?w=1920&h=1920&rs=1&pid=ImgDetMain"
+            class="img-fluid bg-img"
+            alt=""
+          />
+
+          <h6>{{ "11 - 12 - 2024" }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="modal-footer">
+    <button type="button" class="btn btn-solid">Enviar Condolencias</button>
+  </div>
+</div>

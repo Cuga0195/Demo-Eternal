@@ -1,0 +1,206 @@
+.profile-about2 {
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  height: fit-content;
+  margin-bottom: 15px;
+  width: 103%;
+  .card-title {
+    padding: 50px 15px 10px 30px;
+  }
+  .about-content {
+    padding: 30px 40px;
+    border-top: 1px solid rgba(rgb(123, 255, 141), 1);
+    li {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+        background-color: #eaf6ec;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 22px;
+        use {
+          fill: rgba(var(--title-color), 1);
+          &.fill-color {
+            width: 20px;
+            height: 20px;
+            fill: rgba(var(--title-color), 1);
+          }
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+          stroke: rgba(var(--title-color), 1);
+        }
+      }
+      .details {
+        width: 100%;
+        display: block;
+        text-align: start;
+        h4 {
+          color: rgba(var(--title-color), 1);
+          font-family: 14px;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin-bottom: 4px;
+          line-height: 20px;
+        }
+        h5 {
+          font-family: 12px;
+          font-weight: 600;
+          text-transform: capitalize;
+          color: rgba(var(--title-color), 1);
+        }
+        h6 {
+          color: rgba(var(--font-color), 1);
+          text-transform: capitalize;
+          line-height: 24px;
+          font-size: 14px;
+        }
+      }
+      + li {
+        margin-top: 30px;
+      }
+    }
+  }
+  .about-footer {
+    padding: 30px 40px;
+    border-top: 1px solid rgba(rgb(123, 255, 141), 1);
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        a {
+          background-color: rgba(rgb(123, 255, 141), 1);
+          padding: 8px 8px;
+          border-radius: 5px;
+          font-size: 12px;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: white;
+          display: flex;
+          svg {
+            width: 16px;
+            height: 16px;
+            fill: white;
+          }
+        }
+        &.fb {
+          a {
+            background-color: rgba(rgb(32, 32, 149), 1);
+          }
+        }
+        &.tw {
+          a {
+            background-color: rgba(rgb(234, 58, 58), 1);
+          }
+        }
+        &.wa {
+          a {
+            background-color: (rgb(60, 171, 60), 1);
+          }
+        }
+        + li {
+          margin-left: 12px;
+        }
+      }
+    }
+  }
+  &.pages-about {
+    .about-content {
+      li {
+        + li {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+.order-1 {
+  order: -1 !important;
+}
+
+.profile-content {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.image-section {
+  position: relative;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-img > div {
+  height: 100%;
+  border-radius: 100%;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(green, 1) 0%,
+      rgba(var(--white), 1) 38%,
+      rgba(var(--white), 1) 38%,
+      rgba(var(--white), 1) 100%,
+      rgba(var(--white), 1) 100%
+    );
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background: linear-gradient(
+      to right,
+      green 0%,
+      rgba(255, 255, 255, 1) 41%,
+      rgba(255, 255, 255, 1) 38%,
+      rgba(255, 255, 255, 1) 100%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    z-index: -2;
+  }
+}
+
+.stats {
+  position: absolute;
+  top: 9px;
+  right: 26px;
+  /* background-color: rgba(255, 255, 255, 1); */
+  border-radius: 100%;
+  width: 17px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .profile-about2 {
+    width: 106%;
+    margin-left: -10px;
+  }
+}

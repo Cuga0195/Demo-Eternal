@@ -1,0 +1,39 @@
+{
+  "galleryRecord": [
+    {
+      "image": "https://th.bing.com/th/id/OIP.esByQMpk50bL6mZgE9aJlQHaEK?rs=1&pid=ImgDetMain",
+      "previewImage": "https://th.bing.com/th/id/OIP.esByQMpk50bL6mZgE9aJlQHaEK?rs=1&pid=ImgDetMain",
+      "class": "col-4"
+    },
+    {
+      "image": "https://th.bing.com/th/id/R.5ce936c4a65660653ac3b674fc9f9a36?rik=L8avlRTQohU9zA&riu=http%3a%2f%2fwww.misimagenesde.com%2fwp-content%2fuploads%2f2011%2f04%2fimagenes-de-personas.jpg&ehk=I4sr6ZcOUhSXLE9cvDbuLrMi7u9RpSVMiu7QsXKFUCM%3d&risl=&pid=ImgRaw&r=0",
+      "previewImage": "https://th.bing.com/th/id/R.5ce936c4a65660653ac3b674fc9f9a36?rik=L8avlRTQohU9zA&riu=http%3a%2f%2fwww.misimagenesde.com%2fwp-content%2fuploads%2f2011%2f04%2fimagenes-de-personas.jpg&ehk=I4sr6ZcOUhSXLE9cvDbuLrMi7u9RpSVMiu7QsXKFUCM%3d&risl=&pid=ImgRaw&r=0",
+      "class": "col-4"
+    },
+    {
+      "image": "https://definicion.de/wp-content/uploads/2008/06/persona-1.jpg",
+      "previewImage": "https://definicion.de/wp-content/uploads/2008/06/persona-1.jpg",
+      "class": "col-4"
+    },
+    {
+      "class": "col-4 row m-0",
+      "images": [
+        {
+          "class": "col-12 pt-cls p-0",
+          "image": "https://1.bp.blogspot.com/-lwTsuG9LoKY/Vx8I51fPFEI/AAAAAAAAAXI/EX4u_kuiYwUF02sxCh5o05DAy1Z_nAXyACLcB/s1600/musica-salud.jpg",
+          "previewImage": "https://1.bp.blogspot.com/-lwTsuG9LoKY/Vx8I51fPFEI/AAAAAAAAAXI/EX4u_kuiYwUF02sxCh5o05DAy1Z_nAXyACLcB/s1600/musica-salud.jpg"
+        },
+        {
+          "class": "col-12 pt-cls p-0",
+          "image": "https://mejorconsalud.as.com/wp-content/uploads/2016/04/persona-camina-camino.jpg",
+          "previewImage": "https://mejorconsalud.as.com/wp-content/uploads/2016/04/persona-camina-camino.jpg"
+        }
+      ]
+    },
+    {
+      "image": "https://www.turismocampesino.org/wp-content/uploads/2020/02/definicion-de-persona-min.jpg",
+      "previewImage": "https://www.turismocampesino.org/wp-content/uploads/2020/02/definicion-de-persona-min.jpg",
+      "class": "col-8 pt-cls"
+    }
+  ]
+}

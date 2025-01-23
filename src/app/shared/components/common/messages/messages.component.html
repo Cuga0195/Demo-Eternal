@@ -1,0 +1,83 @@
+<div class="container-fluid section-t-space px-0">
+  <div class="page-content">
+    <div class="content-center w-100">
+      <div class="gallery-page-section section-b-space">
+        <div class="card-title">
+          <h3>Buzón de Mensajes</h3>
+        </div>
+        <div class="tab-section">
+          <ul class="nav nav-tabs" role="tablist" style="margin-bottom: 30px">
+            <li class="nav-item">
+              <a
+                class="item-navegacion"
+                [class.active]="openTab == 'Pendientes'"
+                (click)="changeTab('Pendientes')"
+                >{{ "Pendientes" + " " }} <span class="numerador">05</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="item-navegacion"
+                [class.active]="openTab == 'Publicados'"
+                (click)="changeTab('Publicados')"
+                >{{ "Publicados" + " " }} <span class="numerador">25</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="item-navegacion"
+                [class.active]="openTab == 'Rechazados'"
+                (click)="changeTab('Rechazados')"
+                >{{ "Rechazados" + " " }}<span class="numerador">02</span></a
+              >
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div
+              class="tab-pane fade Choose-photo-modal"
+              id="photo-album"
+              [ngClass]="{ 'active show': openTab == 'Pendientes' }"
+              role="tabpanel"
+            >
+              <div class="post-panel">
+                @for (item of post; track item) {
+                <div class="post-wrapper col-grid-box {{ item.class }}">
+                  <app-post-header [postData]="item"></app-post-header>
+                </div>
+                }
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="photo"
+              [ngClass]="{ 'active show': openTab == 'Publicados' }"
+              role="tabpanel"
+            >
+              <div class="post-panel">
+                @for (item of post2; track item) {
+                <div class="post-wrapper col-grid-box {{ item.class }}">
+                  <app-post-header2 [postData]="item"></app-post-header2>
+                </div>
+                }
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="photo"
+              [ngClass]="{ 'active show': openTab == 'Rechazados' }"
+              role="tabpanel"
+            >
+              <div class="post-panel">
+                @for (item of post3; track item) {
+                <div class="post-wrapper col-grid-box {{ item.class }}">
+                  <app-post-header3 [postData]="item"></app-post-header3>
+                </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

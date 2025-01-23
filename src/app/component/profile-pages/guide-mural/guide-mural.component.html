@@ -1,0 +1,52 @@
+<div class="modal-content">
+  <div class="contenido">
+    <div class="image-gallery">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12">
+          <a href="javascript:void(0)" (click)="modalServices.dismissAll()">
+            <app-feather-icon
+              [icons]="'x'"
+              [class]="'icon-light close-btn'"
+            ></app-feather-icon>
+          </a>
+          <div class="slide-1 box-arrow dots-number">
+            <owl-carousel-o [options]="storyOptions">
+              @for (item of carousalData; track item) {
+              <ng-template carouselSlide>
+                <div>
+                  <div class="img-part">
+                    <img [src]="item.image" class="img-fluid" alt="" />
+                  </div>
+                </div>
+              </ng-template>
+              }
+              <ng-template carouselSlide>
+                <div class="container-banner">
+                  <div style="text-align: center; margin-top: 120px">
+                    <div style="margin-bottom: 40px; color: white">
+                      Ahora que sabemos que contienen los murales quieres
+                      empezar a crear uno?
+                    </div>
+                    <div style="text-align: center">
+                      <a (click)="createMural()" class="btn btn-solid">
+                        Crear Mural</a
+                      >
+                    </div>
+                  </div>
+                  <div style="text-align: center; margin-top: 20px">
+                    <a
+                      [routerLink]="['profile/about/murales']"
+                      (click)="modalServices.dismissAll()"
+                      class="btn btn-white"
+                      >Hacerlo Despúes</a
+                    >
+                  </div>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

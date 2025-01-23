@@ -1,0 +1,72 @@
+<div class="row lista-condolencias">
+  <div class="col-sm-12 col-md-6 col-lg-6">
+    @for (item of activityFeed; track item) {
+    <div class="medio-cuerpo">
+      <img
+        src="../../../../../../assets/logos_eterna_horizontal/Group.png"
+        alt=""
+        class="loguito"
+      />
+      <h4>
+        <span class="titulo"
+          >{{ item.span + "" + "&nbsp;&nbsp;" + "(" + item.parentesco + ")" }}
+        </span>
+        <br />
+        <br />
+        " {{ item.title }} "
+      </h4>
+      @if(item.image2 != null){
+      <img [src]="item.image2" alt="" />
+      }
+      <h6>{{ item.time }}</h6>
+    </div>
+    }
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-6">
+    @for (item of activityFeed2; track item) {
+    <div class="medio-cuerpo">
+      <img
+        src="../../../../../assets/logos_eterna_horizontal/Group.png"
+        alt=""
+        class="loguito"
+      />
+      <h4>
+        <span class="titulo"
+          >{{ item.span + "" + "&nbsp;&nbsp;" + "(" + item.parentesco + ")" }}
+        </span>
+        <br />
+        <br />
+        " {{ item.title }} "
+      </h4>
+      @if(item.image2 != null){
+      <img [src]="item.image2" alt="" />
+      }
+      <h6>{{ item.time }}</h6>
+    </div>
+    }
+  </div>
+  <a href="" style="color: green"> ver más ...</a>
+  <!-- <div class="col-sm-12 col-md-6 col-lg-4">
+    @for (item of activityFeed3; track item) {
+    <div class="medio-cuerpo">
+      <img
+        src="../../../../../assets/logos_eterna_horizontal/Group.png"
+        alt=""
+        class="loguito"
+      />
+      <h4>
+        <span class="titulo"
+          >{{ item.span + "" + "&nbsp;&nbsp;" + "(" + item.parentesco + ")" }}
+        </span>
+        <br />
+        <br />
+        " {{ item.title }} "
+      </h4>
+      @if(item.image2 != null){
+      <img [src]="item.image2" alt="" />
+      }
+      <h6>{{ item.time }}</h6>
+    </div>
+    }
+  </div> -->
+</div>

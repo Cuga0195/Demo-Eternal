@@ -1,0 +1,378 @@
+<div class="modal-content">
+  <!-- titulo modal -->
+  <div class="modal-header">
+    <h5
+      style="font-weight: bold; font-size: 16px; color: black"
+      class="modal-title"
+    >
+      Crear Mural
+    </h5>
+    <button
+      type="button"
+      class="btn-close"
+      (click)="modalServices.dismissAll()"
+    ></button>
+  </div>
+  @if (tab1Visible){
+  <div class="tab-1">
+    <div style="padding: 20px">
+      <h3 style="font-weight: bold; color: rgb(9, 66, 9)">
+        Bienvenido a la creacíon de un mural de memorias.
+      </h3>
+      <br />
+      <h4>
+        Elige a quién deseas dedicarle tu mural y vive una experiencia llena de
+        emociones y de momentos especiales.
+      </h4>
+    </div>
+    <div class="row gallery-album">
+      <a
+        class="col-xl-6 col-lg-6 col-6"
+        [routerLink]="['./mural-prototype']"
+        (click)="modalServices.dismissAll()"
+      >
+        <div class="card add-card">
+          <div class="add-icon">
+            <div>
+              <div style="height: 200px">
+                <img
+                  src="https://i.pinimg.com/originals/10/94/3f/10943ff225c84d6847678eb723f2f749.jpg"
+                  alt=""
+                  width="100%"
+                  height="200px"
+                  style="border-radius: 5px 5px 0px 0px; object-fit: cover"
+                />
+              </div>
+              <div style="height: 125px; padding: 20px">
+                <p
+                  style="
+                    margin-bottom: 10px;
+                    font-weight: 900;
+                    color: rgb(9, 66, 9);
+                  "
+                >
+                  Crear tu mural de recuerdos
+                </p>
+                <h5>
+                  Un espacio para inmortalizar los momentos más especiales de tu
+                  vida.
+                </h5>
+              </div>
+            </div>
+            <div style="text-align: center">
+              <a class="btn btn-solid">Elegir</a>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="col-xl-6 col-lg-6 col-6" (click)="showTab(2)">
+        <div class="card add-card">
+          <div class="add-icon">
+            <div>
+              <div style="height: 200px">
+                <img
+                  src="https://media.cnn.com/api/v1/images/stellar/prod/130607171259-05-holocaust-museum.jpg?q=w_1800,h_1200,x_0,y_0,c_fill/w_1280"
+                  alt=""
+                  width="100%"
+                  height="200px"
+                  style="border-radius: 5px 5px 0px 0px; object-fit: cover"
+                />
+              </div>
+              <div style="height: 125px; padding: 20px">
+                <p
+                  style="
+                    margin-bottom: 10px;
+                    color: rgb(9, 66, 9);
+                    font-weight: 900;
+                  "
+                >
+                  Crear un mural en honor a un ser querido
+                </p>
+
+                <h5>
+                  Un espacio para conmemorar su vida y legado, ya sea en vida o
+                  en su recuerdo.
+                </h5>
+              </div>
+            </div>
+            <div style="text-align: center">
+              <a class="btn btn-solid">Elegir</a>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  } @if (tab2Visible){
+  <div class="tab-2">
+    <div style="padding: 20px">
+      <h3 style="margin-bottom: 10px; color: rgb(9, 66, 9); font-weight: 900">
+        Crear un mural en honor a tu ser querido
+      </h3>
+      <h4>Honra su legado de manera especial.</h4>
+    </div>
+    <div class="row gallery-album">
+      <a
+        class="col-xl-6 col-lg-6 col-6"
+        [routerLink]="['./mural-prototype']"
+        (click)="modalServices.dismissAll()"
+      >
+        <div class="card add-card">
+          <div class="add-icon">
+            <div>
+              <div style="height: 200px">
+                <img
+                  src="https://aliciagarciapsicologa.com/wp-content/uploads/2020/05/photos-gff7b35619_1280-e1636372629389.jpg"
+                  alt=""
+                  width="100%"
+                  height="200px"
+                  style="border-radius: 10px 10px 0px 0px; object-fit: cover"
+                />
+              </div>
+              <div style="height: 120px; padding: 20px">
+                <h5 style="color: rgb(9, 66, 9); font-weight: 500">
+                  En este espacio podrás crear un mural para tu ser querido, ya
+                  sea en vida o en su memoria.
+                </h5>
+              </div>
+              <div style="text-align: center; margin-top: 10px">
+                <a class="btn btn-solid">Crear mural</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a class="col-xl-6 col-lg-6 col-6" (click)="showTab(3)">
+        <div class="card add-card">
+          <div class="add-icon">
+            <div>
+              <div style="height: 200px">
+                <img
+                  src="https://th.bing.com/th/id/OIP.2FAqhrppmzHs_NNOOxT3YwHaE7?rs=1&pid=ImgDetMain"
+                  alt=""
+                  width="100%"
+                  height="200px"
+                  style="border-radius: 10px 10px 0px 0px; object-fit: cover"
+                />
+              </div>
+              <div style="height: 120px; padding: 20px">
+                <h5 style="color: rgb(9, 66, 9); font-weight: 500">
+                  Busca a tu ser querido en la lista, si tienes una cuenta
+                  asociada a una empresa funeraria,
+                  <span style="font-weight: bold; color: black">
+                    y crea su mural de recuerdos.</span
+                  >
+                </h5>
+              </div>
+
+              <div style="text-align: center; margin-top: 10px">
+                <a class="btn btn-solid">Buscar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div style="text-align: center">
+      <a style="margin: 10px" class="btn btn-white" (click)="showTab(1)"
+        >Volver</a
+      >
+    </div>
+  </div>
+  } @if (tab3Visible){
+  <div class="tab-3">
+    <div style="padding: 20px">
+      <h3 style="margin-bottom: 10px; color: rgb(9, 66, 9); font-weight: 900">
+        Buscar Ser Querido
+      </h3>
+      <br />
+      <h4>
+        Encuentra a tu ser querido en nuestra lista y crea un mural lleno de
+        recuerdos que celebren su vida y legado.
+      </h4>
+    </div>
+    <div class="row rowsito">
+      <div
+        class="col-xl-4 col-lg-4 col-6"
+        [routerLink]="['./mural-prototype']"
+        (click)="modalServices.dismissAll()"
+      >
+        <div class="card add-card2">
+          <div class="profile-header"></div>
+          <div class="add-icon3">
+            <div>
+              <h5
+                style="
+                  margin-top: 10px;
+                  display: block;
+                  font-size: larger;
+                  font-weight: 700;
+                  height: 50px;
+                "
+                class="card-title"
+              >
+                Edmundo López García
+              </h5>
+              <div class="counter-stats3">
+                <ul>
+                  <li>
+                    <h3
+                      class="counter-value"
+                      style="font-size: small; font-weight: 600"
+                    >
+                      22 de Oct
+                    </h3>
+                    <h5 style="font-size: small; font-weight: 600">1938</h5>
+                  </li>
+                  <li>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/85/85324.png"
+                      alt=""
+                      width="30"
+                      height="30"
+                    />
+                  </li>
+                  <li>
+                    <h3
+                      class="counter-value"
+                      style="font-size: small; font-weight: 600"
+                    >
+                      11 de Dic
+                    </h3>
+                    <h5 style="font-size: small; font-weight: 600">2024</h5>
+                  </li>
+                </ul>
+              </div>
+              <a href="javascript:void(0)" class="btn btn-solid"
+                >Seleccionar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="col-xl-4 col-lg-4 col-6"
+        [routerLink]="['./mural-prototype']"
+        (click)="modalServices.dismissAll()"
+      >
+        <div class="card add-card2">
+          <div class="profile-header"></div>
+          <div class="add-icon3">
+            <div>
+              <h5
+                style="
+                  margin-top: 10px;
+                  display: block;
+                  font-size: larger;
+                  font-weight: 700;
+                  height: 50px;
+                "
+                class="card-title"
+              >
+                Jimmy Obregón Sánchez
+              </h5>
+              <div class="counter-stats3">
+                <ul>
+                  <li>
+                    <h3
+                      class="counter-value"
+                      style="font-size: small; font-weight: 600"
+                    >
+                      02 de Ene
+                    </h3>
+                    <h5 style="font-size: small; font-weight: 600">1946</h5>
+                  </li>
+                  <li>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/85/85324.png"
+                      alt=""
+                      width="30"
+                      height="30"
+                    />
+                  </li>
+                  <li>
+                    <h3
+                      class="counter-value"
+                      style="font-size: small; font-weight: 600"
+                    >
+                      16 de Ago
+                    </h3>
+                    <h5 style="font-size: small; font-weight: 600">2024</h5>
+                  </li>
+                </ul>
+              </div>
+              <a href="javascript:void(0)" class="btn btn-solid"
+                >Seleccionar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-xl-4 col-lg-4 col-6"
+        [routerLink]="['./mural-prototype']"
+        (click)="modalServices.dismissAll()"
+      >
+        <div class="card add-card2">
+          <div class="profile-header"></div>
+          <div class="add-icon3">
+            <div>
+              <h5
+                style="
+                  margin-top: 10px;
+                  display: block;
+                  font-size: larger;
+                  font-weight: 700;
+                  height: 50px;
+                "
+                class="card-title"
+              >
+                Martha Chávez Flores
+              </h5>
+              <div class="counter-stats3">
+                <ul>
+                  <li>
+                    <h3
+                      class="counter-value"
+                      style="font-size: small; font-weight: 600"
+                    >
+                      16 de sept
+                    </h3>
+                    <h5 style="font-size: small; font-weight: 600">1943</h5>
+                  </li>
+                  <li>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/85/85324.png"
+                      alt=""
+                      width="30"
+                      height="30"
+                    />
+                  </li>
+                  <li>
+                    <h3
+                      class="counter-value"
+                      style="font-size: small; font-weight: 600"
+                    >
+                      26 de jun
+                    </h3>
+                    <h5 style="font-size: small; font-weight: 600">2023</h5>
+                  </li>
+                </ul>
+              </div>
+              <a href="javascript:void(0)" class="btn btn-solid"
+                >Seleccionar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align: center">
+    <a style="margin: 10px" class="btn btn-white" (click)="showTab(2)"
+      >Volver</a
+    >
+  </div>
+  }
+</div>

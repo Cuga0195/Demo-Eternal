@@ -1,0 +1,47 @@
+<div class="perfil-menu">
+  <div class="header-left">
+    <ul>
+      <!-- <li>
+      <a [routerLink]="['./services']" [routerLinkActive]="'active'">
+        <app-feather-icon
+          [class]="'icon-font-light iw-16 ih-16'"
+          [icons]="'home'"
+        ></app-feather-icon>
+        <h6 style="margin-left: 10px">Inicio</h6>
+      </a>
+    </li> -->
+      <li>
+        <a [routerLink]="['./murales']" [routerLinkActive]="'active'">
+          <app-feather-icon
+            [class]="'icon-font-light iw-16 ih-16'"
+            [icons]="'image'"
+          ></app-feather-icon>
+          <h6 style="margin-left: 10px">Murales</h6>
+        </a>
+      </li>
+
+      <!-- <li>
+      <a [routerLink]="['./condolencias']" [routerLinkActive]="'active'">
+        <app-feather-icon
+          [icons]="'mail'"
+          [class]="'icon-font-light iw-16 ih-16'"
+        ></app-feather-icon>
+        <h6 style="margin-left: 10px">Mensajes</h6>
+      </a>
+    </li> -->
+    </ul>
+  </div>
+  <div class="header-right">
+    <ul>
+      <li>
+        <a class="help-boton" (click)="guideMural()">
+          <app-feather-icon
+            [class]="'icon-theme'"
+            [icons]="'help-circle'"
+          ></app-feather-icon>
+          <h6 style="margin-left: 10px">Ayuda</h6>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+.actividad {
+  width: 100%;
+}
+.botonsitoarriba {
+  margin-right: 8px;
+  padding: 9px;
+}
+#botonsitoabajo {
+  margin-right: 8px;
+  padding: 9px;
+  position: fixed;
+  left: 290px;
+  bottom: 25px;
+}
+.ocultar {
+  opacity: 0;
+  visibility: hidden;
+}
+.mostrar {
+  opacity: 1;
+  visibility: visible;
+}
+.contenido-condolencias {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+  padding: 5px 30px;
+  height: 1780px;
+}
+
+@media (max-width: 600px) {
+  .contenido-condolencias {
+    height: fit-content;
+    padding: 0;
+  }
+
+  #botonsitoabajo {
+    left: 221px;
+    bottom: 34px;
+  }
+}

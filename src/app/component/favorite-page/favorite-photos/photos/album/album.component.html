@@ -1,0 +1,205 @@
+<div class="row gallery-album" [class.d-none]="isOpen">
+  <a class="col-xl-4 col-lg-4 col-6" (click)="createMural()">
+    <div class="card add-card">
+      <div class="add-icon">
+        <div style="padding: 40px">
+          <app-feather-icon
+            [icons]="'plus-circle'"
+            [class]="'iw-30 ih-30'"
+          ></app-feather-icon>
+          <input type="file" class="form-control-file" />
+          <h5 style="color: green; font-weight: bold" class="card-title">
+            crear Mural
+          </h5>
+          <p style="color: green; font-weight: bold">
+            Comparte recuerdos especiales y recibe mensajes de tus seres
+            queridos
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <!-- <div class="col-xl-4 col-lg-4 col-6">
+    <div class="card2 add-card2">
+      <div class="profile-header">
+        <div style="display: flex">
+          <div class="form-check form-switch" style="margin: 5px">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+            <label
+              style="
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+              "
+              class="form-check-label"
+              for="flexSwitchCheckChecked"
+              checked
+              >Público</label
+            >
+          </div>
+          <div style="margin-top: 5px; margin-left: 180px">
+            <a href="">
+              <app-feather-icon
+                [class]="'iw-18 ih-18 icon-font-light2'"
+                [icons]="'share-2'"
+              ></app-feather-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="add-icon">
+        <div>
+          <div class="profile-img">
+            <div
+              style="
+                background-image: url(https://thumbs.dreamstime.com/z/homem-idoso-24922470.jpg);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+              "
+            ></div>
+            <span class="stats">
+              <img
+                src="../../../../../../assets/logos_eterna_horizontal/Group (2).png"
+                class="img-fluid"
+                alt="verified"
+              />
+            </span>
+          </div>
+          <input type="file" class="form-control-file" />
+          <h5 style="margin-top: 50px" class="card-title">
+            Edmundo López García
+          </h5>
+          <div class="counter-stats2">
+            <ul>
+              <li>
+                <h3 class="counter-value" style="font-size: small">
+                  22 de Oct
+                </h3>
+                <h5 style="font-size: small; font-weight: 500">1938</h5>
+              </li>
+              <li>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/85/85324.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+              </li>
+              <li>
+                <h3 class="counter-value" style="font-size: small">
+                  11 de Dic
+                </h3>
+                <h5 style="font-size: small; font-weight: 500">2024</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="counter-stats">
+            <ul>
+              <li>
+                <h3 class="counter-value" style="font-size: small">
+                  Recuerdos: <span>5</span>
+                </h3>
+              </li>
+              <li>
+                <h3 class="counter-value" style="font-size: small">
+                  Condolencias: 13
+                </h3>
+              </li>
+            </ul>
+          </div>
+          <a href="javascript:void(0)" class="btn btn-solid">Ver Mural</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xl-4 col-lg-4 col-6">
+    <div class="card2 add-card2">
+      <div class="profile-header2">
+        <div class="form-check form-switch" style="margin: 5px">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="flexSwitchCheckChecked"
+          />
+          <label
+            style="
+              color: rgb(5, 39, 11);
+              font-family: 'Montserrat', sans-serif;
+              font-size: 12px;
+            "
+            class="form-check-label"
+            for="flexSwitchCheckChecked"
+            >Privado</label
+          >
+        </div>
+      </div>
+      <div class="add-icon">
+        <div>
+          <div class="profile-img">
+            <div
+              style="
+                background-image: url(https://avatars.githubusercontent.com/u/47202456?v=4?s=400);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+                display: block;
+              "
+            ></div>
+            <span class="stats">
+              <img
+                src="../../../../../../assets/logos_eterna_horizontal/Group.png"
+                class="img-fluid"
+                alt="verified"
+              />
+            </span>
+          </div>
+          <input type="file" class="form-control-file" />
+          <h5 style="margin-top: 50px" class="card-title">
+            jimmy Obregón Sánchez
+          </h5>
+          <div class="counter-stats2">
+            <ul>
+              <li>
+                <h3 class="counter-value" style="font-size: small">
+                  05 de May
+                </h3>
+                <h5 style="font-size: small; font-weight: 500">1995</h5>
+              </li>
+              <li>
+                <app-feather-icon
+                  [icons]="'heart'"
+                  [class]="'iw-30 ih-30'"
+                ></app-feather-icon>
+              </li>
+              <li>
+                <h3 class="counter-value" style="font-size: small">29</h3>
+                <h5 style="font-size: small; font-weight: 500">años</h5>
+              </li>
+            </ul>
+          </div>
+          <div class="counter-stats">
+            <ul>
+              <li>
+                <h3 class="counter-value" style="font-size: small">
+                  Recuerdos: <span>3</span>
+                </h3>
+              </li>
+            </ul>
+          </div>
+          <a href="javascript:void(0)" class="btn btn-solid">Ver Mural</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>

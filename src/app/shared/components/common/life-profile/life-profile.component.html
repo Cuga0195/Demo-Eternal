@@ -1,0 +1,489 @@
+<header>
+  <div class="container-fluid custom-padding cabecera">
+    <div class="header-section">
+      <div class="header-left">
+        <div class="brand-logo">
+          <a>
+            <img
+              src="../../../../../assets/logos_eterna_horizontal/logo_verde.svg"
+              alt=""
+              width="160"
+              height="50"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="pagina-body container-fluid">
+  <div class="pagina-center" style="width: 100%">
+    <div class="profile-page">
+      <div
+        class="profile-cover bg-size"
+        style="
+          background-image: url(https://www.bbva.com/wp-content/uploads/2018/08/amigos-movil-grupo-bbva.jpg);
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: block;
+        "
+      >
+        <img
+          src="assets/images/cover/1.jpg"
+          class="img-fluid bg-img"
+          alt="cover"
+          style="display: none"
+        />
+        <div
+          class="profile-box d-lg-block d-none"
+          style="background-color: #edf1f1; background-image: none"
+        >
+          <div class="profile-content">
+            <div class="image-section">
+              <div class="profile-img">
+                <div
+                  class="bg-size"
+                  style="
+                    background-image: url(https://avatars.githubusercontent.com/u/47202456?v=4?s=400);
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    display: block;
+                  "
+                >
+                  <img
+                    src="https://avatars.githubusercontent.com/u/47202456?v=4?s=400"
+                    class="img-fluid bg-img"
+                    alt="profile"
+                    style="display: none"
+                  />
+                </div>
+                <!-- <span class="stats">
+        <img
+          src="../../../../../../assets/logos_eterna_horizontal/Group.png"
+          class="img-fluid"
+          alt="verified"
+        />
+        <img
+          src="../../../../../../assets/logos_eterna_horizontal/checkmark.png"
+          class="img-fluid"
+          alt="verified"
+        />
+      </span> -->
+              </div>
+            </div>
+            <div class="profile-detail">
+              <h2 style="color: rgb(15, 53, 15); font-size: 20px">
+                Jimmy Obregón Sánchez
+              </h2>
+              <h6>Pragramador Front para Perú y el mundo</h6>
+              <div class="counter-stats">
+                <ul>
+                  <li>
+                    <h3 class="counter-value" style="font-size: medium">
+                      05 de May
+                    </h3>
+                    <h5 style="font-size: medium; font-weight: 500">1995</h5>
+                  </li>
+                  <li>
+                    <app-feather-icon
+                      [icons]="'heart'"
+                      [class]="'iw-40 ih-40'"
+                    ></app-feather-icon>
+                  </li>
+                  <li>
+                    <h3 class="counter-value" style="font-size: medium">
+                      Edad
+                    </h3>
+                    <h5 style="font-size: medium; font-weight: 500">29 años</h5>
+                  </li>
+                </ul>
+              </div>
+              <!-- <a href="javascript:void(0)" (click)="editProfile()" class="btn btn-solid"
+      >Editar Perfil</a
+    > -->
+            </div>
+          </div>
+        </div>
+        <div
+          class="setting-dropdown btn-group custom-dropdown arrow-none dropdown-sm"
+        >
+          <!-- <a
+      class="btn-white btn-cover"
+      href="javascript:void(0)"
+      [class.show]="isShow"
+      (click)="isShow = !isShow"
+    >
+      Agregar Portada
+    </a> -->
+          <div
+            class="dropdown-menu dropdown-menu-right custom-dropdown"
+            style="
+              position: absolute;
+              inset: 0px auto auto 0px;
+              margin: 0px;
+              transform: translate(0px, 41px);
+            "
+          >
+            <ul>
+              <li>
+                <a href="javascript:void(0)">
+                  <app-feather-icon
+                    [class]="'icon-font-light iw-16 ih-16'"
+                    [icons]="'image'"
+                  ></app-feather-icon>
+                  Tomar Foto</a
+                >
+              </li>
+              <li class="choose-file">
+                <a href="javascript:void(0)">
+                  <app-feather-icon
+                    [class]="'icon-font-light iw-16 ih-16'"
+                    [icons]="'upload'"
+                  ></app-feather-icon>
+                  Subir Foto</a
+                >
+                <input type="file" />
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <app-feather-icon
+                    [class]="'icon-font-light iw-16 ih-16'"
+                    [icons]="'maximize'"
+                  ></app-feather-icon>
+                  Cambiar Posición</a
+                >
+              </li>
+              <li>
+                <a href="javascript:void(0)">
+                  <app-feather-icon
+                    [class]="'icon-font-light iw-16 ih-16'"
+                    [icons]="'trash-2'"
+                  ></app-feather-icon>
+                  Eliminar photo</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="d-lg-none d-block">
+        <div class="profile-box">
+          <app-profile-content></app-profile-content>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid contenido-timeline">
+      <div class="pagina-contenido">
+        <div class="contenido-left">
+          <div
+            class="profile-about"
+            style="
+              background-image: url(https://th.bing.com/th/id/OIP.HG6wxT_vvIbSlsBDWtou5gHaF1?w=800&h=631&rs=1&pid=ImgDetMain);
+            "
+          >
+            <div class="card-title">
+              <h3>Dedicado</h3>
+              <h4
+                style="
+                  margin-left: 4px;
+                  margin-top: 3px;
+                  font-family: 'Montserrat', sans-serif;
+                "
+              >
+                a Jimmy
+              </h4>
+            </div>
+            <div class="about-content">
+              <div class="details">
+                <h4 style="margin-top: 40px; color: #082508">
+                  <span>Estimado Jimmy...</span>
+                </h4>
+                <br />
+                <p
+                  style="
+                    font-family: 'Montserrat', sans-serif;
+                    margin-top: 40px;
+                    color: #082508;
+                  "
+                >
+                  "Estas Viviendo la vida como si mañana fuera a terminarse; y
+                  disfrutas cada momento como si fuera el ultimo"
+                  <br />
+                  generalmente contagias a todos con tus ocurrencias y alegrias;
+                  generas una luz y alegrias en muchas personas".
+                </p>
+              </div>
+            </div>
+            <div
+              style="
+                justify-content: center;
+                display: flex;
+                padding-bottom: 20px;
+              "
+            >
+              <img
+                src="../../../../../assets/logos_eterna_horizontal/logo_amarillo.svg"
+                alt=""
+                width="200px"
+                height="120px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="contenido-right">
+          <div class="perfil-menu section-t-space">
+            <ul>
+              <li>
+                <a
+                  [routerLink]="['./friendSuggestion']"
+                  [routerLinkActive]="'active'"
+                >
+                  <app-feather-icon
+                    [class]="'icon-font-light2 iw-16 ih-16'"
+                    [icons]="'image'"
+                  ></app-feather-icon>
+                  <h6 style="margin-left: 10px">Recuerdos</h6>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="suggestion-box section-t-space">
+            <div class="card-title">
+              <h3>Conoce a Jimmy</h3>
+              <br />
+
+              <!-- <div class="settings">
+    <a
+      [routerLink]="['/profile/gallery']"
+      href="javascript:void(0)"
+      class="btn btn-outline ms-auto"
+      style="margin: 8px"
+      >Ver Todos</a
+    >
+    <div class="setting-btn">
+      <a href="javascript:void(0)" class="d-flex">
+        <app-feather-icon
+          [icons]="'rotate-cw'"
+          [class]="'icon icon-theme stroke-width-3 iw-11 ih-11'"
+        ></app-feather-icon>
+      </a>
+    </div>
+    <div
+      class="setting-btn setting-dropdown ms-2"
+      (clickOutside)="outSideClose()"
+    >
+      <div class="btn-group custom-dropdown arrow-none dropdown-sm">
+        <a
+          href="javascript:void(0)"
+          class="d-flex"
+          [class.show]="isShow"
+          (click)="isShow = !isShow"
+        >
+          <app-feather-icon
+            [icons]="'sun'"
+            [class]="'icon icon-theme stroke-width-3 iw-11 ih-11'"
+          ></app-feather-icon>
+        </a>
+        <div
+          class="dropdown-menu dropdown-menu-right custom-dropdown"
+          [class.show]="isShow"
+          style="
+            position: absolute;
+            inset: 0px auto auto 0px;
+            margin: 0px;
+            transform: translate(0px, 13px);
+          "
+        >
+          <ul>
+            <li>
+              <a>
+                <app-feather-icon
+                  [icons]="'user'"
+                  [class]="'icon-font-light iw-16 ih-16'"
+                ></app-feather-icon
+                >Ver Todos</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <app-feather-icon
+                  [icons]="'search'"
+                  [class]="'icon-font-light iw-16 ih-16'"
+                ></app-feather-icon
+                >Etiquetar Amigos</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)">
+                <app-feather-icon
+                  [icons]="'settings'"
+                  [class]="'icon-font-light iw-16 ih-16'"
+                ></app-feather-icon
+                >Configurar</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+            </div>
+            <div class="card-title">
+              <h5 style="margin-left: 0px !important; margin-top: 15px">
+                Momentos más importantes en la vida de Jimmy
+              </h5>
+            </div>
+            <div class="suggestion-content ratio_115">
+              <div class="slide-2 no-arrow default-space">
+                <owl-carousel-o [options]="friendSuggestionOptions">
+                  @if(friendSuggestion2){ @for (slideData of friendSuggestion2;
+                  track slideData) {
+                  <ng-template carouselSlide>
+                    @if(slideData.audio == null && slideData.video == null){
+                    <div>
+                      <div (click)="openModel()">
+                        <div class="story-box">
+                          <div
+                            class="adaptive-overlay {{
+                              slideData.class
+                            }}-overlay"
+                          ></div>
+                          <div
+                            class="story-bg bg-size"
+                            [ngStyle]="{
+                              'background-image':
+                                'url(' + slideData.images + ')'
+                            }"
+                            style="
+                              background-size: cover;
+                              background-position: center center;
+                              background-repeat: no-repeat;
+
+                              display: block;
+                            "
+                          ></div>
+                        </div>
+                        <div class="story-content">
+                          <h6>{{ slideData.name }}</h6>
+                          <span>{{ slideData.title }}</span>
+                        </div>
+                      </div>
+                    </div>
+                    } @if(slideData.audio != null && slideData.video == null){
+                    <div class="card-title">
+                      <div class="contendor-audio">
+                        <div class="contenido-audio">
+                          <div class="contenido-logo-audio">
+                            <svg
+                              class="progreso-audio"
+                              width="160"
+                              height="160"
+                              viewBox="0 0 200 200"
+                            >
+                              <circle
+                                class="metrica-progreso-audio"
+                                cx="100"
+                                cy="100"
+                                r="90"
+                                stroke-width="10"
+                                fill="none"
+                              />
+                              <circle
+                                class="color-progreso-audio"
+                                cx="100"
+                                cy="100"
+                                r="90"
+                                stroke-width="10"
+                                fill="none"
+                                stroke-dasharray="0 600"
+                                stroke-linecap="round"
+                              />
+                            </svg>
+                            <div
+                              class="logo-audio"
+                              style="
+                                background-image: url(https://i.ytimg.com/vi/gRlpR9HrrUs/maxresdefault.jpg);
+                              "
+                            ></div>
+                          </div>
+                          <div class="song-info">
+                            <h2 class="song-info-title">
+                              {{ slideData.name }}
+                            </h2>
+                            <h6 class="song-info-artist">
+                              {{ slideData.title }}
+                            </h6>
+                          </div>
+                        </div>
+                        <div class="player-wrapper">
+                          <i class="fas fa-caret-left player-move-btn"></i>
+                          <i class="fas fa-play-circle player-state-btn"></i>
+                          <i class="fas fa-caret-right player-move-btn"></i>
+                        </div>
+                        <div class="volume-wrapper">
+                          <i
+                            class="fas fa-volume-off"
+                            style="text-align: right"
+                          ></i>
+                          <div class="volume-bar">
+                            <input
+                              type="range"
+                              name="volume-slider"
+                              id="volume-slider"
+                              min="0"
+                              max="1"
+                              step="0.1"
+                              value="0.5"
+                            />
+                            <div class="volume-trail"></div>
+                          </div>
+                          <i class="fas fa-volume-up"></i>
+                        </div>
+                      </div>
+                    </div>
+                    } @if(slideData.video != null){
+                    <div>
+                      <div (click)="openModel()">
+                        <div class="story-box">
+                          <div
+                            class="story-bg bg-size"
+                            [ngStyle]="{
+                              'background-image': 'url(' + slideData.video + ')'
+                            }"
+                            style="
+                              background-size: cover;
+                              background-position: center center;
+
+                              display: block;
+                            "
+                          >
+                            <img
+                              [src]="slideData.video"
+                              class="img-fluid bg-img"
+                              alt=""
+                              style="display: none"
+                            />
+                          </div>
+                        </div>
+                        <div class="story-content">
+                          <h6>{{ slideData.name }}</h6>
+                          <span>{{ slideData.title }}</span>
+                        </div>
+                      </div>
+                    </div>
+                    }
+                  </ng-template>
+                  } }
+                </owl-carousel-o>
+              </div>
+              <br />
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

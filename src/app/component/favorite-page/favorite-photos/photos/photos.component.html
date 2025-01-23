@@ -1,0 +1,98 @@
+<div class="container-fluid section-t-space px-0">
+  <div class="page-content">
+    <div class="content-center w-100">
+      <div class="gallery-page-section section-b-space">
+        <div class="card-title">
+          <h3 style="font-weight: bold">Mural de Memorias</h3>
+          <div class="right-setting">
+            <a (click)="createMural()" class="btn btn-solid">crear Mural</a>
+          </div>
+        </div>
+        <div style="padding: 20px 20px 0px 20px">
+          <h4 style="margin-bottom: 10px; margin-left: 10px">
+            <span style="font-weight: 800"
+              >Un espacio donde las historias y recuerdos perduran con el
+              tiempo.</span
+            >
+          </h4>
+          <div class="row contendor-logos" style="padding: 20px">
+            <div style="margin-bottom: 25px; font-weight: bold; color: green">
+              Aquí en tu mural podrás:
+            </div>
+            <div class="col-4" style="text-align: center">
+              <img
+                src="../../../../../assets/logos_eterna_horizontal/multimedia.png"
+                alt=""
+                width="100px"
+                height="100px"
+              />
+              <p style="color: green; font-weight: bold">Crear Recuerdos</p>
+            </div>
+            <div class="col-4" style="text-align: center">
+              <img
+                src="../../../../../assets/logos_eterna_horizontal/mensajes.png"
+                alt=""
+                width="100px"
+                height="100px"
+              />
+              <p style="color: green; font-weight: bold">Recibir Mensajes</p>
+            </div>
+            <div class="col-4" style="text-align: center">
+              <img
+                src="../../../../../assets/logos_eterna_horizontal/conexion.png"
+                alt=""
+                width="100px"
+                height="100px"
+              />
+              <p style="color: green; font-weight: bold">
+                Compartir y Conectar
+              </p>
+            </div>
+          </div>
+          <h5 class="alert alert-success" role="alert">
+            Aun no tienes ningún mural. ¡Comienza a crear uno para ti o para
+            quien desees!
+          </h5>
+        </div>
+        <div class="tab-section">
+          <!-- <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [class.active]="openTab == 'album'"
+                (click)="changeTab('album')"
+                >Global</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                [class.active]="openTab == 'photos'"
+                (click)="changeTab('photos')"
+                >Vista Previa</a
+              >
+            </li>
+          </ul> -->
+          <div class="tab-content">
+            <div
+              class="tab-pane fade Choose-photo-modal"
+              id="photo-album"
+              [ngClass]="{ 'active show': openTab == 'album' }"
+              role="tabpanel"
+            >
+              <app-album></app-album>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="photo"
+              [ngClass]="{ 'active show': openTab == 'photos' }"
+              role="tabpanel"
+            >
+              <app-gallery-photos></app-gallery-photos>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="post-title lista-mensajes">
+  <div class="profile">
+    <div class="media">
+      @if(postData) { @if(postData.profileImage != null){
+      <a
+        class="popover-cls user-img"
+        #data="ngbPopover"
+        [ngbPopover]="popContent"
+        triggers=""
+        (click)="
+          commonServices.toggle(data, postData.profileImage, postData.userName)
+        "
+        placement="top"
+        [ngStyle]="{ 'background-image': 'url(' + postData.profileImage + ')' }"
+        style="
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          display: block;
+        "
+      >
+        <img
+          [src]="postData.profileImage"
+          class="img-fluid bg-img"
+          alt="user"
+          style="display: none"
+        /> </a
+      >}
+      <div
+        [ngClass]="{
+          'media-body': true,
+        }"
+      >
+        <a href="javascript:void(0)">
+          <h5>
+            De:
+            <span>{{
+              postData.userName + " " + "(" + postData.parentezco + ")"
+            }}</span>
+          </h5>
+          <h5>Para: <span>Edmundo López</span></h5>
+        </a>
+        <br />
+        <span>{{ "' " + postData.condolencia + " '" }}</span>
+        <br />
+        <br />
+        <h6>{{ "Fecha:" + " " + postData.fecha }}</h6>
+      </div>
+      }
+    </div>
+  </div>
+  <div
+    class="setting-btn2 ms-auto setting-dropdown no-bg"
+    (clickOutside)="outSideClose()"
+  >
+    <div class="buttons">
+      <a
+        style="margin-right: 20px"
+        href="javascript:void(0)"
+        class="btn btn-solid"
+        >Publicar</a
+      >
+      <a href="javascript:void(0)" class="btn btn-white">Rechazar</a>
+    </div>
+  </div>
+</div>
+<ng-template #popContent>
+  <app-popover-loader [data]="commonServices.popoverData"></app-popover-loader>
+</ng-template>

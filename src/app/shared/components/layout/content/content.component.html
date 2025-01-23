@@ -1,0 +1,8 @@
+<header [ngClass]="getClass().header">
+  <app-header [currentUrl]="currentUrl"></app-header>
+</header>
+<div class="pagina-body container-fluid" [ngClass]="getClass().body">
+  <div class="pagina-center" style="width: 100%" [ngClass]="getClass().center">
+    <router-outlet></router-outlet>
+  </div>
+</div>

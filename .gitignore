@@ -1,0 +1,22 @@
+# Ignorar dependencias
+node_modules
+.pnp
+.pnp.js
+
+# Ignorar archivos de prueba
+coverage
+
+# Ignorar archivos de producción
+build
+
+# Ignorar archivos misceláneos
+.DS_Store
+.env
+*.log
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

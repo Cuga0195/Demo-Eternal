@@ -1,0 +1,61 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Información de la Esquela</h5>
+  </div>
+  <div class="modal-body">
+    <div class="edit-profile-sec">
+      <div class="row">
+        <div class="edit-title">
+          <div class="icon">
+            <app-feather-icon
+              [icons]="'user'"
+              [class]="'iw-16 ih-16'"
+            ></app-feather-icon>
+          </div>
+          <h5>Infomación Personal</h5>
+        </div>
+
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">* Nombres:</h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">* Apellidos:</h5>
+            <input class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">
+              Fecha de Nacimiento:
+            </h5>
+
+            <input type="date" class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-6">
+          <div class="row edit-title">
+            <h5 class="col-3" style="margin-right: 20px">Fecha de Partida:</h5>
+            <input type="date" class="col-8 inputito" />
+          </div>
+        </div>
+        <div class="col-sm-10 col-md-12 col-lg-12">
+          <div class="row edit-title">
+            <h5 class="col-2">Breve Descripción Personal:</h5>
+            <textarea
+              class="col-10 inputito"
+              style="margin-left: -10px"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a type="button" class="btn btn-solid">Guardar Cambios</a>
+  </div>
+</div>

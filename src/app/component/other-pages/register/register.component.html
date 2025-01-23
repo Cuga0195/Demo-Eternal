@@ -1,0 +1,189 @@
+<app-loading></app-loading>
+<section class="login-section">
+  <div class="header-section">
+    <div class="logo-sec">
+      <div class="contenedor-logo">
+        <img
+          src="../../../../assets/logos_eterna_horizontal/logo_verde.svg"
+          alt="logo"
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-5 d-none d-lg-block">
+        <div class="login-welcome">
+          <!-- <div>
+            <img
+              src="../../../../assets/logos_eterna_horizontal/logo_verde.svg"
+              class="img-fluid"
+              alt="charcter"
+              style="margin-top: -200px; width: 350px"
+            />
+          </div> -->
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-7 col-md-10 col-12 m-auto">
+        <div class="login-form">
+          <div>
+            <div class="login-title">
+              <h2>Registrarse</h2>
+            </div>
+            <div class="login-discription">
+              <h3>Bienvenido</h3>
+              <h4>
+                Eterna te da la bienvenida, Crea tu cuenta acontinuación para
+                comenzar a usar Eterna
+              </h4>
+            </div>
+            <div class="form-sec">
+              <div>
+                <form class="theme-form">
+                  <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      placeholder="Ingresa tu Nombre"
+                    />
+                    <app-feather-icon
+                      [class]="'input-icon iw-20 ih-20'"
+                      [icons]="'user'"
+                    ></app-feather-icon>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Apellidos</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="apellidos"
+                      placeholder="Ingresa tus Apellidos"
+                    />
+                    <app-feather-icon
+                      [class]="'input-icon iw-20 ih-20'"
+                      [icons]="'user'"
+                    ></app-feather-icon>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Correo Electrónico</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      placeholder="Ingresa tu Correo"
+                    />
+                    <app-feather-icon
+                      [class]="'input-icon iw-20 ih-20'"
+                      [icons]="'mail'"
+                    ></app-feather-icon>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Contraseña</label>
+                    <input
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Ingresa tu Contraseña"
+                      formControlName="password"
+                      [type]="show ? 'text' : 'password'"
+                    />
+                    @if(show){
+                    <app-feather-icon
+                      [icons]="'eye'"
+                      [class]="'input-icon iw-20 ih-20'"
+                      (click)="show = !show"
+                    ></app-feather-icon>
+                    } @else {
+                    <app-feather-icon
+                      [icons]="'eye-off'"
+                      [class]="'input-icon iw-20 ih-20'"
+                      (click)="show = !show"
+                    ></app-feather-icon>
+                    }
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1"
+                      >Confirmar Contraseña</label
+                    >
+                    <input
+                      class="form-control"
+                      id="exampleInputPassword1"
+                      placeholder="Ingresa tu Contraseña"
+                      formControlName="password"
+                      [type]="show ? 'text' : 'password'"
+                    />
+                    @if(show){
+                    <app-feather-icon
+                      [icons]="'eye'"
+                      [class]="'input-icon iw-20 ih-20'"
+                      (click)="show = !show"
+                    ></app-feather-icon>
+                    } @else {
+                    <app-feather-icon
+                      [icons]="'eye-off'"
+                      [class]="'input-icon iw-20 ih-20'"
+                      (click)="show = !show"
+                    ></app-feather-icon>
+                    }
+                  </div>
+                  <div class="bottom-sec">
+                    <div class="form-check checkbox_animated">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label class="form-check-label" for="exampleCheck1"
+                        >Acepto las políticas y condiciones</label
+                      >
+                    </div>
+                  </div>
+                  <div class="btn-section">
+                    <a
+                      [routerLink]="['../../profile/about-after']"
+                      href="javascript:void(0)"
+                      class="btn btn-solid btn-lg"
+                      >Iniciar</a
+                    >
+                  </div>
+                </form>
+                <div class="connect-with">
+                  <h6><span>o Registrase con</span></h6>
+                  <ul class="social-links">
+                    <li class="google">
+                      <a href="javascript:void(0)">
+                        <img
+                          src="../../../../assets/logos_eterna_horizontal/vector-google.png"
+                          alt=""
+                          width="25"
+                          height="25"
+                        />
+                      </a>
+                    </li>
+                    <li class="facebook">
+                      <a href="javascript:void(0)">
+                        <app-svg-icon [icons]="'facebook'"></app-svg-icon>
+                      </a>
+                    </li>
+                    <li class="twitter">
+                      <a href="javascript:void(0)">
+                        <img
+                          src="../../../../assets/svg/apple-logo-svgrepo-com (1).svg"
+                          alt=""
+                          width="25"
+                          height="25"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

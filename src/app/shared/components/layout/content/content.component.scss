@@ -1,0 +1,27 @@
+.pagina-body {
+  width: 100%;
+  padding-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+.pagina-center {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .pagina-body {
+    width: 100%;
+    padding-top: 72px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .pagina-center {
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+}
